@@ -14,7 +14,7 @@ restaurantRouter.post('/create', async(req, res) => {
     }
 })
 
-restaurantRouter.post('/by-radius', async (req, res) => {
+restaurantRouter.get('/by-radius', async (req, res) => {
     const { latitude, longitude, radius } = req.body;
 
     try {
@@ -35,7 +35,7 @@ restaurantRouter.post('/by-radius', async (req, res) => {
     }
 })
 
-restaurantRouter.post('/around-range', async (req, res) => {
+restaurantRouter.get('/around-range', async (req, res) => {
     const {latitude, longitude, maxDistance, minDistance} = req.body;
 
     try {
